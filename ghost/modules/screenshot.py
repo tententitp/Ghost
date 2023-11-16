@@ -26,7 +26,7 @@ class GhostModule(Module):
 
     def run(self, argc, argv):
         self.print_process(f"Taking screenshot...")
-        self.device.send_command("screencap /data/local/tmp/screenshot.png")
+        self.device.send_command("screencap /storage/self/primary/screenshot.png")
 
-        self.device.download('/data/local/tmp/screenshot.png', argv[1])
-        self.device.send_command("rm /data/local/tmp/screenshot.png")
+        self.device.download('/storage/self/primary/screenshot.png', argv[1])
+        self.device.send_command("rm /storage/self/primary/screenshot.png")
